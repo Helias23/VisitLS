@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visita Los Santos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+  <!-- Música de fondo con controles -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://archive.org/download/LouisArmstrongWhatAWonderfulWorld/Louis%20Armstrong%20-%20What%20A%20Wonderful%20World.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  <div class="fixed top-5 right-5 z-50">
+    <button onclick="toggleMusic()" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full shadow-lg">
+      🎵 Pausar/Reanudar Música
+    </button>
+  </div>
+  <script>
+    const music = document.getElementById('bg-music');
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+
+  <!-- Header estilo GTA VI -->
+  <header class="text-center py-20 fade-in" style="background-image: url('https://images6.alphacoders.com/134/1340451.jpeg'); background-size: cover; background-position: center;">
+    <div class="bg-black bg-opacity-70 p-10">
+      <h1 class="text-6xl font-extrabold text-pink-400 drop-shadow-md uppercase tracking-wide">Visita Los Santos</h1>
+      <p class="mt-4 text-2xl text-white">Cultura, playas y ritmo tropical</p>
+    </div>
+  </header>
+
+  <!-- Navbar minimalista estilo neon -->
+  <nav class="bg-gradient-to-r from-pink-500 via-yellow-400 to-purple-600 text-white text-center py-3 font-semibold tracking-widest uppercase">
+    <a href="#lugares" class="mx-6 hover:underline">Lugares</a>
+    <a href="#cultura" class="mx-6 hover:underline">Cultura</a>
+    <a href="#gastronomia" class="mx-6 hover:underline">Gastronomía</a>
+  </nav>
+
+  <!-- Secciones principales -->
+  <main class="max-w-5xl mx-auto px-6 py-16 space-y-24 fade-in">
+    <section id="lugares">
+      <h2 class="text-4xl font-bold text-pink-400 mb-4">Lugares Turísticos</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Isla_Iguana_Panama.jpg" alt="Isla Iguana" class="rounded-xl shadow-xl mb-6">
+      <p class="text-xl">Explora las playas de Pedasí, la isla Iguana, el parque nacional Cerro Hoya y pueblos vibrantes como Las Tablas.</p>
+    </section>
+
+    <section id="cultura">
+      <h2 class="text-4xl font-bold text-pink-400 mb-4">Cultura y Tradiciones</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Diablicos_sucios_en_Las_Tablas.jpg" alt="Diablicos sucios" class="rounded-xl shadow-xl mb-6">
+      <p class="text-xl">Vive el folklore panameño con polleras, tamboritos, diablicos sucios y el legendario Carnaval de Las Tablas.</p>
+    </section>
+
+    <section id="gastronomia">
+      <h2 class="text-4xl font-bold text-pink-400 mb-4">Gastronomía</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Sancocho_paname%C3%B1o.jpg" alt="Sancocho panameño" class="rounded-xl shadow-xl mb-6">
+      <p class="text-xl">Disfruta del auténtico sabor local con sancocho, arroz con coco, tamales y dulces artesanales.</p>
+    </section>
+  </main>
+
+  <!-- Footer estilo GTA VI -->
+  <footer class="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-6 mt-20">
+    <p class="text-sm tracking-widest uppercase">&copy; 2025 Visita Los Santos</p>
+  </footer>
+</body>
+</html>
