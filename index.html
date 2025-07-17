@@ -16,26 +16,11 @@
   </style>
 </head>
 <body class="bg-black text-white font-sans">
-  <!-- Música de fondo con controles -->
-  <audio id="bg-music" autoplay loop>
+  <!-- Música de fondo con controles visibles -->
+  <audio id="bg-music" autoplay loop controls style="position: fixed; top: 10px; right: 10px; z-index: 50;">
     <source src="https://archive.org/download/LouisArmstrongWhatAWonderfulWorld/Louis%20Armstrong%20-%20What%20A%20Wonderful%20World.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
   </audio>
-  <div class="fixed top-5 right-5 z-50">
-    <button onclick="toggleMusic()" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full shadow-lg">
-      🎵 Pausar/Reanudar Música
-    </button>
-  </div>
-  <script>
-    const music = document.getElementById('bg-music');
-    function toggleMusic() {
-      if (music.paused) {
-        music.play();
-      } else {
-        music.pause();
-      }
-    }
-  </script>
 
   <!-- Header estilo GTA VI -->
   <header class="text-center py-20 fade-in" style="background-image: url('https://images6.alphacoders.com/134/1340451.jpeg'); background-size: cover; background-position: center;">
