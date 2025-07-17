@@ -3,81 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visita Los Santos</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Extensión - Visita Los Santos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    :root {
+      --color-azul: #0033A0;
+      --color-amarillo: #FFCC00;
+      --color-rojo: #C8102E;
+      --color-texto: #2b2b2b;
+      --color-fondo: #f9f9f9;
     }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in;
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+    }
+
+    header {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/24/Bandera_de_Los_Santos.svg');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+      font-size: 2.8em;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    nav {
+      background-color: var(--color-azul);
+      padding: 15px 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      color: var(--color-amarillo);
+    }
+
+    section {
+      padding: 50px 25px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      border-left: 8px solid var(--color-rojo);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--color-azul);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: var(--color-rojo);
+      color: white;
     }
   </style>
 </head>
-<body class="bg-black text-white font-sans">
-  <!-- Esa cosa que va con bandera -->
-  <header class="text-center py-20 fade-in" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Bandera_de_la_Provincia_de_Los_Santos.svg/2560px-Bandera_de_la_Provincia_de_Los_Santos.svg.png'); background-size: cover; background-position: center;">
-    <div class="bg-black bg-opacity-70 p-10">
-      <h1 class="text-6xl font-extrabold text-pink-400 drop-shadow-md uppercase tracking-wide">Visita Los Santos</h1>
-      <p class="mt-4 text-2xl text-white">Cultura, historia y naturaleza en el corazón de Azuero</p>
-    </div>
+<body>
+  <header>
+    Extensión - Visita Los Santos
   </header>
 
-  <!-- Navbar minimalista estilo neon -->
-  <nav class="bg-gradient-to-r from-pink-500 via-yellow-400 to-purple-600 text-white text-center py-3 font-semibold tracking-widest uppercase">
-    <a href="#informacion" class="mx-6 hover:underline">Información</a>
-    <a href="#historia" class="mx-6 hover:underline">Historia</a>
-    <a href="#lugares" class="mx-6 hover:underline">Lugares</a>
-    <a href="#mapa" class="mx-6 hover:underline">Mapa</a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="extension.html">Extensión</a>
+    <a href="ubicacion.html">Ubicación</a>
+    <a href="clima.html">Clima</a>
+    <a href="poblacion.html">Población</a>
+    <a href="historia.html">Historia</a>
+    <a href="lugares.html">Lugares</a>
+    <a href="radio.html">Radio</a>
+    <a href="mapa.html">Mapa</a>
   </nav>
 
-  <!-- Secciones principales -->
-  <main class="max-w-5xl mx-auto px-6 py-16 space-y-24 fade-in">
-    <section id="informacion">
-      <h2 class="text-4xl font-bold text-pink-400 mb-6">🏞 Provincia de Los Santos</h2>
-      <p class="text-xl mb-4">📍 <strong>Cabecera</strong></p>
-      <p class="text-xl mb-4">La cabecera de la provincia de Los Santos es La Villa de Los Santos, un lugar lleno de historia y tradición, conocida por ser cuna del movimiento independentista panameño en 1821.</p>
-      <p class="text-xl mb-4">📐 <strong>Extensión Territorial</strong></p>
-      <p class="text-xl mb-4">Los Santos tiene una extensión de aproximadamente 3,809 km², siendo una de las provincias más pequeñas del país, pero rica en cultura y naturaleza.</p>
-      <p class="text-xl mb-4">🌍 <strong>Ubicación o Posición Geográfica</strong></p>
-      <p class="text-xl mb-4">Está ubicada en la región Azuero, al sureste de la península, limitando al norte con Herrera, al sur y al este con el océano Pacífico, y al oeste con la provincia de Veraguas.</p>
-      <p class="text-xl mb-4">☀️ <strong>Clima</strong></p>
-      <p class="text-xl mb-4">El clima en Los Santos es tropical seco, con temperaturas altas durante todo el año. Se caracteriza por tener una de las temporadas secas más largas del país, lo que favorece la agricultura tradicional.</p>
-      <p class="text-xl mb-4">👥 <strong>Población</strong></p>
-      <p class="text-xl">Según los datos más recientes del INEC (2023), Los Santos tiene una población estimada de 110,000 habitantes, concentrada principalmente en distritos como Las Tablas, Guararé y La Villa.</p>
-    </section>
+  <section>
+    <h2>📐 Extensión Territorial</h2>
+    <p>La provincia de Los Santos abarca aproximadamente 3,809 km², ubicada en la península de Azuero, siendo una de las provincias más emblemáticas de Panamá.  
+    Su territorio incluye una combinación de llanuras, colinas y zonas costeras que la hacen atractiva para el turismo y la agricultura.</p>
 
-    <section id="historia">
-      <h2 class="text-4xl font-bold text-pink-400 mb-6">📜 Antecedentes Históricos</h2>
-      <p class="text-xl mb-4">Los Santos jugó un papel clave en la historia de Panamá. El 10 de noviembre de 1821, se dio el Grito de La Villa de Los Santos, uno de los eventos más importantes que impulsó la independencia de Panamá de España.</p>
-      <p class="text-xl">Esta provincia es símbolo de identidad nacional y folclor panameño.</p>
-    </section>
+    <p>Esta extensión territorial permite una gran diversidad de ecosistemas y paisajes, desde playas vírgenes hasta áreas rurales con una rica cultura tradicional.</p>
 
-    <section id="lugares">
-      <h2 class="text-4xl font-bold text-pink-400 mb-6">🌄 Lugares Turísticos e Históricos</h2>
-      <ul class="list-disc pl-6 space-y-3 text-xl">
-        <li><strong>Iglesia de San Atanasio</strong> (La Villa), declarada monumento histórico nacional.</li>
-        <li><strong>Museo de la Nacionalidad</strong>, que recoge la historia de la independencia.</li>
-        <li><strong>Parque Simón Bolívar</strong>, centro de eventos cívicos y patrióticos.</li>
-        <li><strong>Carnavales de Las Tablas</strong>, los más famosos del país.</li>
-        <li><strong>Festival Nacional de la Pollera</strong> (Las Tablas), evento que celebra el traje típico panameño.</li>
-        <li><strong>Playas El Uverito y Monagre</strong>, ideales para el turismo costero.</li>
-        <li><strong>Cerro Canajagua</strong>, con vistas panorámicas de la región azuerense.</li>
-      </ul>
-    </section>
+    <p>Además, Los Santos es reconocida por mantener vivas sus tradiciones folclóricas y culturales, muchas de las cuales están estrechamente relacionadas con su geografía y ambiente.</p>
 
-    <section id="mapa">
-      <h2 class="text-4xl font-bold text-pink-400 mb-6">🗺 Mapa de la Provincia</h2>
-      <div class="flex justify-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15874.741070312616!2d-80.43502324282232!3d7.935583994505309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa5e41e6e8bc16d%3A0x99a0f6d0ab676c7c!2sProvincia%20de%20Los%20Santos!5e0!3m2!1ses-419!2spa!4v1710637310105!5m2!1ses-419!2spa" width="100%" height="450" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-  </main>
+    <div style="margin-top: 30px; text-align: center;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/zTnPd-4eXk4" title="Video sobre Los Santos, Panamá" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
 
-  <!-- Buenasss como estan -->
-  <footer class="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-6 mt-20">
-    <p class="text-sm tracking-widest uppercase">&copy; 2025 Visita Los Santos</p>
+  <footer>
+    <p>&copy; 2025 Visita Los Santos</p>
   </footer>
 </body>
 </html>
